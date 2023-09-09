@@ -54,12 +54,19 @@ export default function About() {
                                 <div className="skill-item padd-15">
                                     <h5>Python</h5>
                                     <div className="progress">
-                                        <div className="progress-in" style={{ width: '65%' }}></div>
+                                        <div className="progress-in" style={{ width: '70%' }}></div>
                                         <div className="skill-percentage">65%</div>
                                     </div>
                                 </div>
                                 <div className="skill-item padd-15">
-                                    <h5>HTMLnd CSS</h5>
+                                    <h5>Big Data Tools & Technlologies</h5>
+                                    <div className="progress">
+                                        <div className="progress-in" style={{ width: '50%' }}></div>
+                                        <div className="skill-percentage">65%</div>
+                                    </div>
+                                </div>
+                                <div className="skill-item padd-15">
+                                    <h5>HTML and CSS</h5>
                                     <div className="progress">
                                         <div className="progress-in" style={{ width: '70%' }}></div>
                                         <div className="skill-percentage">70%</div>
