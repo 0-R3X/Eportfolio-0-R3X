@@ -18,7 +18,7 @@ export default function Portfolio() {
                 <div className="portfolio-item padd-15">
                     <div className="portfolio-item-inner shadow-dark">
                         <div className="portfolio-img">
-                            <a href="https://github.com/0-R3X/usem_app"><img src="img/usem.png" alt=""/></a>
+                            <a href="https://github.com/0-R3X/usem_app"><img src={process.env.PUBLIC_URL + '/img/usem.png'} alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ export default function Portfolio() {
                 <div className="portfolio-item padd-15">
                     <div className="portfolio-item-inner shadow-dark">
                         <div className="portfolio-img">
-                            <a href="https://github.com/0-R3X/VIRTUAL-T"><img src="img/VirtualT.png" alt=""/></a>
+                            <a href="https://github.com/0-R3X/VIRTUAL-T"><img src={process.env.PUBLIC_URL + '/img/VirtualT.png'} alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ export default function Portfolio() {
                 <div className="portfolio-item padd-15">
                     <div className="portfolio-item-inner shadow-dark">
                         <div className="portfolio-img">
-                            <a href="https://github.com/0-R3X/RAWStrength"><img src="img/raw.png" alt="" height="184px"/></a>
+                            <a href="https://github.com/0-R3X/RAWStrength"><img src={process.env.PUBLIC_URL + '/img/raw.png'} alt="" height="184px"/> </a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export default function Portfolio() {
                 <div className="portfolio-item padd-15">
                     <div className="portfolio-item-inner shadow-dark">
                         <div className="portfolio-img">
-                            <a href="https://github.com/0-R3X/Gait-Detection"><img src="img/gait.png" alt=""/></a>
+                            <a href="https://github.com/0-R3X/Gait-Detection"><img src={process.env.PUBLIC_URL + '/img/gait.png'} alt="" /></a>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import TypedText from './TypedText';
-
 import "../css/style.switcher.css"
 import Portfolio from './Portfolio';
 import Contact from './Contact';
@@ -8,8 +7,7 @@ import About from './About';
 import NavItem from './NavItem';
 
 export default function Home({ isScrolled, setIsScrolled }) {
-
-const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('home');
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -54,9 +52,11 @@ const [activeSection, setActiveSection] = useState('home');
       });
     };
   }, []);
+
   const handleNavClick = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
-    setActiveSection(section);
+    const targetSection = section === 'home' ? 'home' : section.toLowerCase();
+    document.getElementById(targetSection).scrollIntoView({ behavior: 'smooth' });
+    setActiveSection(targetSection);
     setIsScrolled(true);
   };
 
@@ -66,54 +66,52 @@ const [activeSection, setActiveSection] = useState('home');
 
   return (
     <div>
-    <nav className={isScrolled ? 'scrolled' : ''}>
-      <div className="aside">
+      <nav className={isScrolled ? 'scrolled' : ''}>
+        <div className="aside">
           <div className="logo">
-              <a href="/"><span>E</span>-Portfolio</a>
+            <a href="/"><span>E</span>-Portfolio</a>
           </div>
           <div className="nav-toggler">
-              <span></span>
+            <span></span>
           </div>
           <ul className="nav">
-            <NavItem targetSection="home" active={activeSection === 'home'} handleClick={handleNavClick} scrolled={isScrolled}/>
-            <NavItem targetSection="about" active={activeSection === 'about'} handleClick={handleNavClick} scrolled={isScrolled}/>
-            <NavItem targetSection="portfolio" active={activeSection === 'portfolio'} handleClick={handleNavClick} scrolled={isScrolled}/>
-            <NavItem targetSection="contact" active={activeSection === 'contact'} handleClick={handleNavClick} scrolled={isScrolled}/>
-          </ul>  
-      </div>
-    </nav>
-    <section ref={homeRef}>
-        <div className="main-container">
-        <div className="main-content">
-            <section className="home section" id="home">
-                <div className="container">
-                    <div className="row">
-                        <div className="home-info padd-15">
-                            <h3 className="hello">
-                                Hello, my name is <span className="name">Satyam Uniyal</span>
-                            </h3>
-                            <h3 className="my-profession">
-                                I'm a <TypedText />
-                            </h3>
-                            <p>My expertise is to create and design web applications and solve the bugs in a Software and many more...</p>
-                            <button  className="btn" onClick={handleHireMeClick}>
-                                Know Me
-                            </button>
-                        </div>
-                        <div className="home-img padd-15">
-                            <img src="img/DSC_0956.jpg" alt=""/>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <About  ref={aboutRef}/>
-            <Portfolio  ref={portfolioRef}/>
-            <Contact  ref={contactRef}/>           
-
+            <NavItem targetSection="home" active={activeSection === 'home'} handleClick={() => handleNavClick('home')} scrolled={isScrolled} />
+            <NavItem targetSection="about" active={activeSection === 'about'} handleClick={() => handleNavClick('about')} scrolled={isScrolled} />
+            <NavItem targetSection="portfolio" active={activeSection === 'portfolio'} handleClick={() => handleNavClick('portfolio')} scrolled={isScrolled} />
+            <NavItem targetSection="contact" active={activeSection === 'contact'} handleClick={() => handleNavClick('contact')} scrolled={isScrolled} />
+          </ul>
         </div>
+      </nav>
+      <section ref={homeRef}>
+        <div className="main-container">
+          <div className="main-content">
+            <section className="home section" id="home">
+              <div className="container">
+                <div className="row">
+                  <div className="home-info padd-15">
+                    <h3 className="hello">
+                      Hello, my name is <span className="name">Satyam Uniyal</span>
+                    </h3>
+                    <h3 className="my-profession">
+                      I'm a <TypedText />
+                    </h3>
+                    <p>My expertise is to create and design web applications and solve the bugs in a Software and many more...</p>
+                    <button className="btn" onClick={handleHireMeClick}>
+                      Know Me
+                    </button>
+                  </div>
+                  <div className="home-img padd-15">
+                    <img src={process.env.PUBLIC_URL + '/img/DSC_0956.jpg'} alt="" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <About ref={aboutRef} />
+            <Portfolio ref={portfolioRef} />
+            <Contact ref={contactRef} />
+          </div>
+        </div>
+      </section>
     </div>
-    </section>
-    </div>
-  )
+  );
 }
