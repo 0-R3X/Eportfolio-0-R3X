@@ -42,7 +42,7 @@ export default function Portfolio() {
                 <div className="portfolio-item padd-15">
                     <div className="portfolio-item-inner shadow-dark">
                         <div className="portfolio-img">
-                            <a href="https://github.com/0-R3X/Gait-Detection"><img src={process.env.PUBLIC_URL + '/img/gait.png'} alt="" /></a>
+                            <a href="https://github.com/0-R3X/Gait-Detection"><img src={process.env.PUBLIC_URL + '/img/Gait.png'} alt="" /></a>
                         </div>
                     </div>
                 </div>
