@@ -20,7 +20,7 @@ export default function Contact() {
                     <h4>Email</h4>
                     <p>manojuniyalm@gmail.com</p>
                 </div>
-
+                {/* EDITED */}
                 <div className="contact-info-item padd-15">
                     <div className="icon">
                         <i className="fa fa-globe"></i>
