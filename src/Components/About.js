@@ -13,7 +13,7 @@ export default function About() {
                 <div className="about-content padd-15">
                     <div className="row">
                         <div className="about-text padd-15">
-                            <h3>I'm Satyam Uniyal and I am a<span>Developer</span></h3>
+                            <h3>I'm Satyam Uniyal and I am a <span>Developer</span></h3>
                             <p>Currently,I am pursuing my bachelor's degree in Computer Science and Engineering and like to play video games and learn new skills in my free time.</p>
                         </div>
                     </div>
@@ -54,15 +54,15 @@ export default function About() {
                                 <div className="skill-item padd-15">
                                     <h5>Python</h5>
                                     <div className="progress">
-                                        <div className="progress-in" style={{ width: '70%' }}></div>
+                                        <div className="progress-in" style={{ width: '65%' }}></div>
                                         <div className="skill-percentage">65%</div>
                                     </div>
                                 </div>
                                 <div className="skill-item padd-15">
                                     <h5>Big Data Tools & Technlologies</h5>
                                     <div className="progress">
-                                        <div className="progress-in" style={{ width: '50%' }}></div>
-                                        <div className="skill-percentage">65%</div>
+                                        <div className="progress-in" style={{ width: '70%' }}></div>
+                                        <div className="skill-percentage">70%</div>
                                     </div>
                                 </div>
                                 <div className="skill-item padd-15">
@@ -77,13 +77,6 @@ export default function About() {
                                     <div className="progress">
                                         <div className="progress-in" style={{ width: '85%' }}></div>
                                         <div className="skill-percentage">85%</div>
-                                    </div>
-                                </div>
-                                <div className="skill-item padd-15">
-                                    <h5>JavaScript</h5>
-                                    <div className="progress">
-                                        <div className="progress-in" style={{ width: '70%' }}></div>
-                                        <div className="skill-percentage">70%</div>
                                     </div>
                                 </div>
                                 <div className="skill-item padd-15">
